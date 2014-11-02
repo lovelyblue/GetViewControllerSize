@@ -27,7 +27,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-#pragma mark ---指定字串---
+#pragma mark ---指定字串給label---
     _lblPreText.text = _preString;
 }
 /*
