@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SecoundViewController.h
 //  GetViewControllerSize
 //
 //  Created by spider1203 on 2014/11/2.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SecoundViewController.h"
 
-@interface ViewController : UIViewController
+@interface SecoundViewController : UIViewController
+{
 
+}
+@property(nonatomic,assign) NSString* preString;
 
 @end
-

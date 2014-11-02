@@ -14,6 +14,7 @@
 		AFB8E0F41A05F203000908B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB8E0F31A05F203000908B7 /* Images.xcassets */; };
 		AFB8E0F71A05F203000908B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB8E0F51A05F203000908B7 /* LaunchScreen.xib */; };
 		AFB8E1031A05F203000908B7 /* GetViewControllerSizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8E1021A05F203000908B7 /* GetViewControllerSizeTests.m */; };
+		AFFDFFDA1A06225A008E0439 /* SecoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFDFFD91A06225A008E0439 /* SecoundViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		AFB8E0FC1A05F203000908B7 /* GetViewControllerSizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetViewControllerSizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB8E1011A05F203000908B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB8E1021A05F203000908B7 /* GetViewControllerSizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetViewControllerSizeTests.m; sourceTree = "<group>"; };
+		AFFDFFD81A06225A008E0439 /* SecoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecoundViewController.h; sourceTree = "<group>"; };
+		AFFDFFD91A06225A008E0439 /* SecoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecoundViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,9 @@
 		AFB8E0E51A05F203000908B7 /* GetViewControllerSize */ = {
 			isa = PBXGroup;
 			children = (
+				AFFDFFD71A06220C008E0439 /* ViewControllers */,
 				AFB8E0EA1A05F203000908B7 /* AppDelegate.h */,
 				AFB8E0EB1A05F203000908B7 /* AppDelegate.m */,
-				AFB8E0ED1A05F203000908B7 /* ViewController.h */,
-				AFB8E0EE1A05F203000908B7 /* ViewController.m */,
 				AFB8E0F01A05F203000908B7 /* Main.storyboard */,
 				AFB8E0F31A05F203000908B7 /* Images.xcassets */,
 				AFB8E0F51A05F203000908B7 /* LaunchScreen.xib */,
@@ -117,6 +119,17 @@
 				AFB8E1011A05F203000908B7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFFDFFD71A06220C008E0439 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFB8E0ED1A05F203000908B7 /* ViewController.h */,
+				AFB8E0EE1A05F203000908B7 /* ViewController.m */,
+				AFFDFFD81A06225A008E0439 /* SecoundViewController.h */,
+				AFFDFFD91A06225A008E0439 /* SecoundViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				AFB8E0EF1A05F203000908B7 /* ViewController.m in Sources */,
 				AFB8E0EC1A05F203000908B7 /* AppDelegate.m in Sources */,
+				AFFDFFDA1A06225A008E0439 /* SecoundViewController.m in Sources */,
 				AFB8E0E91A05F203000908B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +428,7 @@
 				AFB8E1081A05F203000908B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFB8E1091A05F203000908B7 /* Build configuration list for PBXNativeTarget "GetViewControllerSizeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +437,7 @@
 				AFB8E10B1A05F203000908B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
