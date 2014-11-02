@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+#pragma mark ---註冊Notification事件---
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChangeOccur) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +31,48 @@
 {
 #pragma mark ---指定字串給label---
     _lblPreText.text = _preString;
+    
+#pragma mark ---判定這是什麼樣的裝置---
+    if (self.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiomPad)
+    {
+        NSLog(@"This is a iPad screen");
+    }
+    
+    if (self.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        NSLog(@"This is a iPhone screen");
+    }
+    
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+#pragma mark ---判斷是哪種方向---
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    
+    if (orientation == UIDeviceOrientationLandscapeLeft) {
+        NSLog(@"橫的左邊");
+    }
+    
+    if (orientation == UIDeviceOrientationLandscapeRight) {
+        NSLog(@"橫的右邊");
+    }
+    
+    if (orientation == UIDeviceOrientationPortrait) {
+        NSLog(@"正的 portrait");
+    }
+    
+    if (orientation == UIDeviceOrientationPortraitUpsideDown) {
+        NSLog(@"portrait上下顛倒");
+    }
+    
+    NSLog(@"Size W:%f, H:%f",size.width,size.height);
+}
+
+#pragma mark ---Orientation change Notification---
+-(void)orientationChangeOccur
+{
+    NSLog(@"orientationChangeOccur Notification");
 }
 /*
 #pragma mark - Navigation
